@@ -7,6 +7,12 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view> {{name}}</view>
+  <view wx:for="{{students}}">
+  {{item.id}}\t{{item.name}}\t{{item.age}}
+  </view>
+  <view>当前计数：{{counter}}</view>
+  <button size='mini' bindtap='handleBtnClick'>+</button>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>

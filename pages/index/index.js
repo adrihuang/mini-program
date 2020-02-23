@@ -1,15 +1,28 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+// 数据绑定，列表展示，事件监听
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
+    name: 'duanyao',
+    counter: 0,
+    students:[
+      { id: 100, name: 'cury', age: 18 },
+      { id: 101, name: 'tom', age: 19 },
+      { id: 102, name: 'jerry', age: 20 }
+    ],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
+  handleBtnClick: function(){
+    this.setData({
+      counter: this.data.counter + 1
+    });
+    console.log(this.data.counter)
+  },
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
